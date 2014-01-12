@@ -1,0 +1,6 @@
+from LinkedListAmazon import * 
+
+def sumLL(node1, node2):
+    newLL = LinkedList()
+    carry = 0 
+    return sumLL_rec(node1, node2, carry, newLL)

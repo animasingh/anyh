@@ -1,0 +1,12 @@
+    def search(self,value):
+        self.subtree_search(self.root,value);       
+                            
+    def subtree_search(self,Node,value):
+        if Node==None:
+            return "Not Found";
+        elif Node.getValue()==value:
+            return "Found"
+        elif Node.getValue()<value:
+            self.subtree_search(Node.getLeft(),value);
+        elif Node.getValue()>value:
+            self.subtree_search(Node.getRight(),value);

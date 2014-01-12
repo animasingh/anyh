@@ -1,0 +1,16 @@
+#given a list of numbers and a number. Check if there are two numbers in the list that adds up to the NUMBER
+
+def checkSum(list,Number):
+    slist = sort(list) #O(n*log(n))
+    # now perform a binary search on the sorted list
+    for idx,item in enumerate(slist):
+        delta = Number-item
+        if delta>slist[-1]:
+            return False
+        else:
+            return binarySearch(slist[idx+1:],Number) 
+        
+        
+        
+def binarySearch(sortedlist, Number):
+    
